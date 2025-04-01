@@ -1,0 +1,26 @@
+Git-Github Setting
+git clone (key 복사 후 shift + ins)
+업로드 안할 파일은 ignore안에 따로 작성해주기
+ignore가 없을땐 https://www.toptal.com/developers/gitignore 에서 python 검색후 전체 복사
+--> 그리고 .gitignore 파일 만들어서 안에 붙여넣기
+git add .
+git commit -m ""
+git push
+clone/add/commit/push
+
+Python Env Setting
+source venv/Scripts/activate (나올때는 ctrcl+c)
+- requirements.txt 파일 적용해 개발환경 설정
+	- numpy == 2.2.4
+	  pands
+	  etc
+
+NumPy
+--> 연산속도 (ML/DL)
+--> 기초통계/ML/DL 알고리즘 모두 만들 수 있음
+--> 단점 : 일반인은 사용하기가 어렵다
+----------> 수학적인 이론을 모르니깐 어려움
+
+통계: scipy, statsmodels, pingouin, pandas
+머신러닝: scikit-learn, lightbm, xgboost, catboost
+딥러닝: 파이토치, 텐서플로 
