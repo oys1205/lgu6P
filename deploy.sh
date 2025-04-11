@@ -1,20 +1,15 @@
 #!/bin/bash
 
-# 파일 이름
-FILE_NAME="deploy.sh"
+# 커밋 메시지 입력 받기
+read -p "커밋 메시지를 입력하세요: " user_message
 
-# 메시지
-MESSAGE="Testing"
+# KST 시간 구하기 (UTC+9)
+current_time=$(TZ=Asia/Seoul date "+%Y-%m-%d %H:%M:%S")
 
-# 시간 (현재 날짜 + 시간)
-TIME=$(date "+%Y-%m-%d %H:%M:%S (KST)")
+# 전체 메시지 구성
+commit_message="$user_message | $current_time (KST)"
 
-# 상태
-STATUS="now"
-
-# 출력
-printf "📄 %-15s  %-30s  %s\n" "$FILE_NAME" "$MESSAGE | $TIME" "$STATUS"
-
+# Git 명령어 실행
 git add .
-git commit -m "commit message"
+git commit -m "$commit_message"
 git push
