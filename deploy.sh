@@ -16,5 +16,5 @@ STATUS="now"
 printf "📄 %-15s  %-30s  %s\n" "$FILE_NAME" "$MESSAGE | $TIME" "$STATUS"
 
 git add .
-git commit -m "updated"
+git commit -m "commit message"
 git push
